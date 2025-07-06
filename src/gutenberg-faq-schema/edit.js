@@ -11,7 +11,8 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
+import { PanelBody, Button, TextControl, TextareaControl } from '@wordpress/components';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -29,13 +30,68 @@ import './editor.scss';
  *
  * @return {Element} Element to render.
  */
-export default function Edit() {
+export default function Edit( { attributes, setAttributes } ) {
+	const { faqs = [] } = attributes;
+
+	const updateFAQ = ( index, field, value ) => {
+		const updated = [...faqs];
+		updated[index][field] = value;
+		setAttributes({
+			faqs: updated
+		});
+	};
+	const addFAQ = () => {
+		setAttributes({
+			faqs: [...faqs, {question: '', answer: ''}]
+		});
+	};
+
+	const removeFAQ = (index) => {
+		const updated = [...faqs];
+		updated.splice(index, 1);
+		setAttributes({
+			faqs: updated
+		});
+	};
+
 	return (
-		<p { ...useBlockProps() }>
-			{ __(
-				'Gutenberg Faq Schema – hello from the editor!',
-				'gutenberg-faq-schema'
-			) }
-		</p>
+		<div { ...useBlockProps() }>
+			<h3>FAQ Block</h3>
+			{faqs.map((faq, idx) => (
+				<div key={idx} style={{
+					border: '1px solid #eee',
+					pagging: '1rem',
+					marginBottom: '1rem'
+				}}>
+					
+							<TextareaControl
+								label="Question"
+								value={faq.question}
+								onChange={
+									val => updateFAQ(idx, 'question', val)
+								}
+							/>
+							<TextareaControl
+								label="Answer"
+								value={faq.answer}
+								onChange={
+									val => updateFAQ(idx, 'answer, val')
+								}
+								style={{
+									marginTop: '0.75rem'
+								}}
+							/>
+							<Button isDestructive variant="tertiary" onClick={
+								() => removeFAQ(idx)
+							}
+							>
+								Remove FAQ Item
+							</Button>
+				</div>
+			))}
+			<Button variant="primary" onClick={addFAQ}>
+				Add FAQ Item
+			</Button>
+		</div>
 	);
 }

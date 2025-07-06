@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "title": "Gutenberg Faq Schema",
   "category": "widgets",
-  "icon": "smiley",
+  "icon": "editor-ul",
   "description": "FAQ with added SEO-friendly schema.",
   "example": {},
   "attributes": {
