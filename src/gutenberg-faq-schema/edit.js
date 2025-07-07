@@ -75,7 +75,7 @@ export default function Edit( { attributes, setAttributes } ) {
 								label="Answer"
 								value={faq.answer}
 								onChange={
-									val => updateFAQ(idx, 'answer, val')
+									val => updateFAQ(idx, 'answer', val)
 								}
 								style={{
 									marginTop: '0.75rem'

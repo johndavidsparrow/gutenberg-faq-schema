@@ -110,7 +110,7 @@ function Edit({
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextareaControl, {
         label: "Answer",
         value: faq.answer,
-        onChange: val => updateFAQ(idx, 'answer, val'),
+        onChange: val => updateFAQ(idx, 'answer', val),
         style: {
           marginTop: '0.75rem'
         }
