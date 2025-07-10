@@ -70,6 +70,8 @@ export default function Edit( { attributes, setAttributes } ) {
 								onChange={
 									val => updateFAQ(idx, 'question', val)
 								}
+								className="textarea-faq question"
+								rows="6"
 							/>
 							<TextareaControl
 								label="Answer"
@@ -80,16 +82,22 @@ export default function Edit( { attributes, setAttributes } ) {
 								style={{
 									marginTop: '0.75rem'
 								}}
+								className="textarea-faq question"
+								rows="6"
 							/>
 							<Button isDestructive variant="tertiary" onClick={
 								() => removeFAQ(idx)
 							}
+							className="textarea-faq btn-remove"
 							>
 								Remove FAQ Item
 							</Button>
 				</div>
 			))}
-			<Button variant="primary" onClick={addFAQ}>
+			<Button variant="primary"
+			onClick={addFAQ}
+			className="textarea-faq btn-add"
+			>
 				Add FAQ Item
 			</Button>
 		</div>

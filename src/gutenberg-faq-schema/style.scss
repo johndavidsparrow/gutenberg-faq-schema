@@ -6,5 +6,40 @@
  */
 
 .wp-block-create-block-gutenberg-faq-schema {
+	--block-gutenberg-faq-schema-red: rgb(146, 0, 0);
 	padding: 2px;
+	.textarea-faq {
+		textarea {
+			border-radius: 5px 5px 0 5px;
+		}
+	}
+	.btn-remove {
+		border: 1px solid var(--block-gutenberg-faq-schema-red);
+		color: var(--block-gutenberg-faq-schema-red);
+		background-color: #fff;
+		&:hover,
+		&:focus {
+			background-color: var(--block-gutenberg-faq-schema-red);
+			color: #fff;
+		}
+	}
+	&:not(.block-editor-block-list__block) { // front-end only styling, not editor
+		dl {
+			> * > p {
+				font-size: 0.875rem;
+			}
+			dt {
+				border-top: 1px solid #ddd;
+				&:last-child {
+					border-top: none;
+				}
+				+ dd {
+					border-bottom: 1px solid #ddd;
+				}
+				&:first-child + dd {
+					border-bottom: none;
+				}
+			}
+		}
+	}
 }

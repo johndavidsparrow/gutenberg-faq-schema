@@ -15,7 +15,7 @@ $output = '<div ' . get_block_wrapper_attributes() . '>
 
 foreach( $faqs as $faq ) {
     if ( empty( $faq['question'] ) || empty( $faq['answer'] ) ) continue;
-    $output .= '<dt>' . wp_kses_post( $faq['question'] ) . '</dt>';
+    $output .= '<dt>' . wpautop( wp_kses_post( $faq['question'] ) ) . '</dt>';
     $output .= '<dd>' . wpautop( wp_kses_post( $faq['answer'] ) ) . '</dd>';
 }
 
