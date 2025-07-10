@@ -23,16 +23,24 @@
   background-color: var(--block-gutenberg-faq-schema-red);
   color: #fff;
 }
+.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl, .wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dt, .wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dd {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
 .wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl > * > p {
   font-size: 0.875rem;
 }
 .wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt {
+  padding: 0.5rem;
   border-top: 1px solid #ddd;
 }
 .wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt:last-child {
   border-top: none;
 }
 .wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt + dd {
+  padding: 0.5rem 1.5rem 0.5rem 0;
   border-bottom: 1px solid #ddd;
 }
 .wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt:first-child + dd {

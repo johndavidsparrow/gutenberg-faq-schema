@@ -23,17 +23,25 @@
 			color: #fff;
 		}
 	}
-	&:not(.block-editor-block-list__block) { // front-end only styling, not editor
+	&:not(.block-editor-block-list__block) { // front-end only styling, not editor. JDS TODO: Try moving the editor styles over to the editor.scss
+		dl, dt, dd {
+			margin-block-start: 0;
+			margin-block-end: 0;
+			margin-inline-start: 0;
+			margin-inline-end: 0;
+		}
 		dl {
 			> * > p {
 				font-size: 0.875rem;
 			}
 			dt {
+				padding: 0.5rem;
 				border-top: 1px solid #ddd;
 				&:last-child {
 					border-top: none;
 				}
 				+ dd {
+					padding: 0.5rem 0 0.5rem 1.5rem;
 					border-bottom: 1px solid #ddd;
 				}
 				&:first-child + dd {
