@@ -25,7 +25,23 @@
  */
 
 /* eslint-disable no-console */
-console.log('Hello World! (from create-block-gutenberg-faq-schema block)');
+
+const faqWrappers = document.querySelectorAll('.wp-block-create-block-gutenberg-faq-schema');
+if (faqWrappers && faqWrappers.length) {
+  faqWrappers.forEach(wrapper => {
+    const faqItems = wrapper.querySelectorAll('dt');
+    if (faqItems && faqItems.length) {
+      faqItems.forEach(faqItem => {
+        faqItem.addEventListener('click', e => {
+          let target = e.target;
+          target = target.closest('dt');
+          if (target) target.classList.toggle('is-open');
+        });
+      });
+    }
+  });
+}
+
 /* eslint-enable no-console */
 /******/ })()
 ;

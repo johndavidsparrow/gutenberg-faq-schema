@@ -31,7 +31,7 @@
 			margin-inline-end: 0;
 		}
 		dl {
-			> * > p {
+			> * p {
 				font-size: 0.875rem;
 			}
 			dt {
@@ -43,9 +43,24 @@
 				+ dd {
 					padding: 0.5rem 0 0.5rem 1.5rem;
 					border-bottom: 1px solid #ddd;
+					display: grid;
+					grid-template-rows: 0fr;
+					transition: all 0.3s ease;
+					overflow: hidden;
+					> div {
+						overflow: hidden;
+					}
 				}
 				&:first-child + dd {
 					border-bottom: none;
+				}
+				&:hover {
+					cursor: pointer;
+				}
+				&.is-open {
+					+ dd {
+						grid-template-rows: 1fr;
+					}
 				}
 			}
 		}

@@ -29,7 +29,7 @@
   margin-inline-start: 0;
   margin-inline-end: 0;
 }
-.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl > * > p {
+.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl > * p {
   font-size: 0.875rem;
 }
 .wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt {
@@ -42,7 +42,20 @@
 .wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt + dd {
   padding: 0.5rem 1.5rem 0.5rem 0;
   border-bottom: 1px solid #ddd;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt + dd > div {
+  overflow: hidden;
 }
 .wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt:first-child + dd {
   border-bottom: none;
+}
+.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt:hover {
+  cursor: pointer;
+}
+.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt.is-open + dd {
+  grid-template-rows: 1fr;
 }
