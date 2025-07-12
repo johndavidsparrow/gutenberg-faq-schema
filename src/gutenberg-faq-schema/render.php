@@ -33,3 +33,22 @@ $output .= '</dl>
 </div>';
 
 echo $output;
+
+
+// SCHEMA! See https://developers.google.com/search/docs/appearance/structured-data/faqpage
+
+add_action( 'wp_head', function() use ($faqs) ) {
+    $entities = [];
+    foreach( $faqs as $faq ) {
+        if ( empty( $faq['question'] ) || empty( $faq['answer'] ) ) continue;
+        $entities[] = [
+            "@type" => "Question",
+            "name"  => escape_schema_text( $faq['question'] ),
+            "acceptedAnswer" => [
+                "@type" => "Answer",
+                "text"  => escape_schema_text( $faq['answer'] )
+            ],
+        ];
+    }
+}
+
