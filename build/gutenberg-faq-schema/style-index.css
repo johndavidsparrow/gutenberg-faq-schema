@@ -32,19 +32,34 @@
 .wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl > * p {
   font-size: 0.875rem;
 }
+.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl > * p:first-of-type {
+  margin-top: 0;
+}
 .wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt {
   padding: 0.5rem;
   border-top: 1px solid #ddd;
+  display: flex;
+  align-items: baseline;
+}
+.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt .icon-wrapper {
+  line-height: 0;
+  margin-right: 1rem;
+}
+.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt svg {
+  width: 16px;
+  transition: all 0.8s ease;
+  transform: rotate(0deg);
+  transform-origin: center;
 }
 .wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt:last-child {
   border-top: none;
 }
 .wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt + dd {
-  padding: 0.5rem 0 0.5rem 1.5rem;
+  padding: 0.5rem 0 0.5rem 2.5rem;
   border-bottom: 1px solid #ddd;
   display: grid;
   grid-template-rows: 0fr;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
   overflow: hidden;
 }
 .wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt + dd > div {
@@ -55,6 +70,9 @@
 }
 .wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt:hover {
   cursor: pointer;
+}
+.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt.is-open svg {
+  transform: rotate(-180deg);
 }
 .wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt.is-open + dd {
   grid-template-rows: 1fr;

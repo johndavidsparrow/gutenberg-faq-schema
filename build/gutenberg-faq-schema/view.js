@@ -36,6 +36,10 @@ if (faqWrappers && faqWrappers.length) {
           let target = e.target;
           target = target.closest('dt');
           if (target) target.classList.toggle('is-open');
+
+          // Handle the aria-expanded
+          const expanded = target.getAttribute('aria-expanded') === 'true';
+          target.setAttribute('aria-expanded', expanded ? 'false' : 'true');
         });
       });
     }
