@@ -47,7 +47,7 @@
 }
 .wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt svg {
   width: 16px;
-  transition: all 0.5s ease;
+  transition: all 0.8s ease;
   transform: rotate(0deg);
   transform-origin: center;
 }
