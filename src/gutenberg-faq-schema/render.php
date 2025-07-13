@@ -1,8 +1,8 @@
 <?php
 
-// function escape_schema_text( $text ) {
-//     return esc_html( str_replace( array( "\r", "\n" ), ' ', $text ) );
-// }
+function escape_schema_text( $text ) {
+    return esc_html( str_replace( array( "\r", "\n" ), ' ', $text ) );
+}
 
 $faqs = $attributes['faqs'] ?? [];
 
@@ -37,7 +37,10 @@ echo $output;
 
 // SCHEMA! See https://developers.google.com/search/docs/appearance/structured-data/faqpage
 
-add_action( 'wp_head', function() use ($faqs) ) {
+add_action( 'wp_head', function() use ($faqs) {
+    if ( empty( $faqs ) ) {
+        return '';
+    }
     $entities = [];
     foreach( $faqs as $faq ) {
         if ( empty( $faq['question'] ) || empty( $faq['answer'] ) ) continue;
@@ -50,5 +53,5 @@ add_action( 'wp_head', function() use ($faqs) ) {
             ],
         ];
     }
-}
-
+    
+}, 20 );
