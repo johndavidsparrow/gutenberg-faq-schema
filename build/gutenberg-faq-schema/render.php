@@ -35,7 +35,7 @@ $output .= '</dl>
 echo $output;
 
 
-// SCHEMA! See https://developers.google.com/search/docs/appearance/structured-data/faqpage
+// Schema: See https://developers.google.com/search/docs/appearance/structured-data/faqpage
 
 add_action( 'wp_head', function() use ($faqs) {
     if ( empty( $faqs ) ) {
@@ -53,5 +53,14 @@ add_action( 'wp_head', function() use ($faqs) {
             ],
         ];
     }
+    if ( $entities ) { ?>
+        <script type="application/ld+json">
+        <?php echo(wp_json_encode([
+            "@context" => "https://schema.org",
+            "@type" => "FAQPage",
+            "mainEntity" => $entities,
+        ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT)); ?>
+        </script>
+    <?php }
     
 }, 20 );

@@ -47,7 +47,7 @@
 }
 .wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt svg {
   width: 16px;
-  transition: all 0.8s ease;
+  transition: all 0.5s ease;
   transform: rotate(0deg);
   transform-origin: center;
 }
@@ -59,7 +59,7 @@
   border-bottom: 1px solid #ddd;
   display: grid;
   grid-template-rows: 0fr;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
   overflow: hidden;
 }
 .wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt + dd > div {
