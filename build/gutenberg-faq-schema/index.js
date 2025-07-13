@@ -93,6 +93,15 @@ function Edit({
       faqs: updated
     });
   };
+  const moveFAQ = (from, to) => {
+    if (to < 0 || to >= faqs.length) return;
+    const updated = [...faqs];
+    const [moved] = updated.splice(from, 1);
+    updated.splice(to, 0, moved);
+    setAttributes({
+      faqs: updated
+    });
+  };
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
     ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)(),
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h3", {
@@ -118,6 +127,16 @@ function Edit({
         },
         className: "textarea-faq question",
         rows: "6"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
+        onClick: () => moveFAQ(idx, idx - 1),
+        disabled: idx === 0,
+        size: "small",
+        children: "\u2191 Move Up"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
+        onClick: () => moveFAQ(idx, idx + 1),
+        disabled: idx === faqs.length - 1,
+        size: "small",
+        children: "\u2193 Move Down"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
         isDestructive: true,
         variant: "tertiary",

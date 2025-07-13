@@ -54,6 +54,14 @@ export default function Edit( { attributes, setAttributes } ) {
 		});
 	};
 
+	const moveFAQ = (from, to) => {
+		if (to < 0 || to >= faqs.length) return;
+		const updated = [...faqs];
+		const [moved] = updated.splice(from, 1);
+		updated.splice(to, 0, moved);
+		setAttributes({ faqs: updated });
+	};
+
 	return (
 		<div { ...useBlockProps() }>
 			<h3>FAQ Block</h3>
@@ -84,6 +92,20 @@ export default function Edit( { attributes, setAttributes } ) {
 						className="textarea-faq question"
 						rows="6"
 					/>
+					<Button
+						onClick={() => moveFAQ(idx, idx - 1)}
+						disabled={idx === 0}
+						size="small"
+					>
+						↑ Move Up
+					</Button>
+					<Button
+						onClick={() => moveFAQ(idx, idx + 1)}
+						disabled={idx === faqs.length - 1}
+						size="small"
+					>
+						↓ Move Down
+					</Button>
 					<Button isDestructive variant="tertiary" onClick={
 						() => removeFAQ(idx)
 					}
