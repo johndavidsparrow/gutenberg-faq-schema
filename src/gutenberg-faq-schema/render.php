@@ -27,12 +27,9 @@ foreach( $faqs as $faq ) {
 
 $output .= '</dl>
 </div>';
-
 echo $output;
 
-
 // Schema: See https://developers.google.com/search/docs/appearance/structured-data/faqpage
-
 add_action( 'wp_head', function() use ($faqs) {
     if ( empty( $faqs ) ) {
         return;

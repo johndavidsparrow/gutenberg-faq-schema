@@ -63,35 +63,34 @@ export default function Edit( { attributes, setAttributes } ) {
 					pagging: '1rem',
 					marginBottom: '1rem'
 				}}>
-					
-							<TextareaControl
-								label="Question"
-								value={faq.question}
-								onChange={
-									val => updateFAQ(idx, 'question', val)
-								}
-								className="textarea-faq question"
-								rows="6"
-							/>
-							<TextareaControl
-								label="Answer"
-								value={faq.answer}
-								onChange={
-									val => updateFAQ(idx, 'answer', val)
-								}
-								style={{
-									marginTop: '0.75rem'
-								}}
-								className="textarea-faq question"
-								rows="6"
-							/>
-							<Button isDestructive variant="tertiary" onClick={
-								() => removeFAQ(idx)
-							}
-							className="textarea-faq btn-remove"
-							>
-								Remove FAQ Item
-							</Button>
+					<TextareaControl
+						label="Question"
+						value={faq.question}
+						onChange={
+							val => updateFAQ(idx, 'question', val)
+						}
+						className="textarea-faq question"
+						rows="6"
+					/>
+					<TextareaControl
+						label="Answer"
+						value={faq.answer}
+						onChange={
+							val => updateFAQ(idx, 'answer', val)
+						}
+						style={{
+							marginTop: '0.75rem'
+						}}
+						className="textarea-faq question"
+						rows="6"
+					/>
+					<Button isDestructive variant="tertiary" onClick={
+						() => removeFAQ(idx)
+					}
+					className="textarea-faq btn-remove"
+					>
+						Remove FAQ Item
+					</Button>
 				</div>
 			))}
 			<Button variant="primary"
