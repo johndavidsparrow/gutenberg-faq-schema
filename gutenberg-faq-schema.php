@@ -57,3 +57,7 @@ function create_block_gutenberg_faq_schema_block_init() {
 	}
 }
 add_action( 'init', 'create_block_gutenberg_faq_schema_block_init' );
+
+function escape_schema_text( $text ) {
+    return esc_html( str_replace( array( "\r", "\n" ), ' ', $text ) );
+}
