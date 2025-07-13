@@ -38,6 +38,11 @@ if (faqWrappers && faqWrappers.length) {
                     const expanded = target.getAttribute('aria-expanded') === 'true';
                     target.setAttribute('aria-expanded', expanded ? 'false' : 'true');
                 });
+                faqItem.addEventListener('keypress', (e) => {
+                    let target = e.target;
+                    target = target.closest('dt');
+                    if (target) target.click();
+                });
             });
         }
 

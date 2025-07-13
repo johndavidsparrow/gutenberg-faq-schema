@@ -12,7 +12,7 @@ $output = '<div ' . get_block_wrapper_attributes() . '>
 foreach( $faqs as $faq ) {
     if ( empty( $faq['question'] ) || empty( $faq['answer'] ) ) continue;
     $uniqid = uniqid();
-    $output .= '<dt aria-controls="answer-' . $uniqid . '" aria-expanded="false">
+    $output .= '<dt aria-controls="answer-' . $uniqid . '" aria-expanded="false" tabindex="0">
         <div class="icon-wrapper">
             <svg width="100%" height="100%" viewBox="0 0 334 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;">
                 <g id="Vector" transform="matrix(33.3333,0,0,33.3333,-233.333,-300)">
