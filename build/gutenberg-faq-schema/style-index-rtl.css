@@ -1,1 +1,79 @@
-.wp-block-create-block-gutenberg-faq-schema{--block-gutenberg-faq-schema-red:#920000;padding:2px}.wp-block-create-block-gutenberg-faq-schema .textarea-faq textarea{border-radius:5px 5px 5px 0}.wp-block-create-block-gutenberg-faq-schema .btn-remove{background-color:#fff;border:1px solid var(--block-gutenberg-faq-schema-red);color:var(--block-gutenberg-faq-schema-red)}.wp-block-create-block-gutenberg-faq-schema .btn-remove:focus,.wp-block-create-block-gutenberg-faq-schema .btn-remove:hover{background-color:var(--block-gutenberg-faq-schema-red);color:#fff}.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dd,.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl,.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dt{margin-block-end:0;margin-block-start:0;margin-inline-end:0;margin-inline-start:0}.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl>* p{font-size:.875rem}.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl>* p:first-of-type{margin-top:0}.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt{align-items:baseline;border-top:1px solid #ddd;display:flex;padding:.5rem}.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt .icon-wrapper{line-height:0;margin-left:1rem}.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt svg{transform:rotate(0deg);transform-origin:center;transition:all .8s ease;width:16px}.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt:last-child{border-top:none}.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt+dd{border-bottom:1px solid #ddd;display:grid;grid-template-rows:0fr;overflow:hidden;padding:.5rem 2.5rem .5rem 0;transition:all .3s ease}.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt+dd>div{overflow:hidden}.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt:first-child+dd{border-bottom:none}.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt:hover{cursor:pointer}.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt.is-open svg{transform:rotate(180deg)}.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt.is-open+dd{grid-template-rows:1fr}
+/*!************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/gutenberg-faq-schema/style.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-create-block-gutenberg-faq-schema {
+  --block-gutenberg-faq-schema-red: rgb(146, 0, 0);
+  padding: 2px;
+}
+.wp-block-create-block-gutenberg-faq-schema .textarea-faq textarea {
+  border-radius: 5px 5px 5px 0;
+}
+.wp-block-create-block-gutenberg-faq-schema .btn-remove {
+  border: 1px solid var(--block-gutenberg-faq-schema-red);
+  color: var(--block-gutenberg-faq-schema-red);
+  background-color: #fff;
+}
+.wp-block-create-block-gutenberg-faq-schema .btn-remove:hover, .wp-block-create-block-gutenberg-faq-schema .btn-remove:focus {
+  background-color: var(--block-gutenberg-faq-schema-red);
+  color: #fff;
+}
+.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl, .wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dt, .wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dd {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl > * p {
+  font-size: 0.875rem;
+}
+.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl > * p:first-of-type {
+  margin-top: 0;
+}
+.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt {
+  padding: 0.5rem;
+  border-top: 1px solid #ddd;
+  display: flex;
+  align-items: baseline;
+}
+.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt .icon-wrapper {
+  line-height: 0;
+  margin-left: 1rem;
+}
+.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt svg {
+  width: 16px;
+  transition: all 0.8s ease;
+  transform: rotate(0deg);
+  transform-origin: center;
+}
+.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt:last-child {
+  border-top: none;
+}
+.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt + dd {
+  padding: 0.5rem 2.5rem 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt + dd > div {
+  overflow: hidden;
+}
+.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt:first-child + dd {
+  border-bottom: none;
+}
+.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt:hover {
+  cursor: pointer;
+}
+.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt.is-open svg {
+  transform: rotate(180deg);
+}
+.wp-block-create-block-gutenberg-faq-schema:not(.block-editor-block-list__block) dl dt.is-open + dd {
+  grid-template-rows: 1fr;
+}
