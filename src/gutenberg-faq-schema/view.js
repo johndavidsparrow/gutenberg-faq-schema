@@ -45,9 +45,6 @@ if (faqWrappers && faqWrappers.length) {
                 });
             });
         }
-
-
-
     });
 }
 
