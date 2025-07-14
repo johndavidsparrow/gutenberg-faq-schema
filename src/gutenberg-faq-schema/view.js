@@ -20,8 +20,6 @@
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/#view-script
  */
 
-/* eslint-disable no-console */
-
 const faqWrappers = document.querySelectorAll('.wp-block-create-block-gutenberg-faq-schema');
 
 if (faqWrappers && faqWrappers.length) {
@@ -47,8 +45,3 @@ if (faqWrappers && faqWrappers.length) {
         }
     });
 }
-
-
-
-
-/* eslint-enable no-console */
