@@ -22,7 +22,7 @@ This block is a simple FAQ block. Questions can be added, removed, and reordered
 
 = How is this different from any other FAQ Gutenberg block? =
 
-This is a lean, simple FAQ block, but it also generates the FAQ schema markup. More information on the schema and why it is useful can be found on [Google's structured data documentation](https://developers.google.com/search/docs/appearance/structured-data/faqpage).
+This is a lean, simple FAQ block, but it also generates the FAQ schema markup. More information on the schema and why it is useful can be found on Google's structured data documentation: https://developers.google.com/search/docs/appearance/structured-data/faqpage.
 
 == Screenshots ==
 
