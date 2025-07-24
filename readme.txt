@@ -2,24 +2,17 @@
 Contributors:      The WordPress Contributors
 Tags:              block
 Tested up to:      6.7
-Stable tag:        0.1.0
+Stable tag:        0.2.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-Example block scaffolded with Create Block tool.
+Gutenberg block for FAQs, reorderabble and with automated FAQ schema markup generation.
 
 == Description ==
 
-This is the long description. No limit, and you can use Markdown (as well as in the following sections).
-
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+This block is a simple FAQ block. Questions can be added, removed, and reordered in the editor, and in the front-end, FAQ schema markup is generated for improved SEO and better user experience.
 
 == Installation ==
-
-This section describes how to install the plugin and get it working.
-
-e.g.
 
 1. Upload the plugin files to the `/wp-content/plugins/gutenberg-faq-schema` directory, or install the plugin through the WordPress plugins screen directly.
 1. Activate the plugin through the 'Plugins' screen in WordPress
@@ -27,13 +20,9 @@ e.g.
 
 == Frequently Asked Questions ==
 
-= A question that someone might have =
+= How is this different from any other FAQ Gutenberg block? =
 
-An answer to that question.
-
-= What about foo bar? =
-
-Answer to foo bar dilemma.
+This is a lean, simple FAQ block, but it also generates the FAQ schema markup. More information on the schema and why it is useful can be found on [Google's structured data documentation](https://developers.google.com/search/docs/appearance/structured-data/faqpage).
 
 == Screenshots ==
 
@@ -45,11 +34,5 @@ directory take precedence. For example, `/assets/screenshot-1.png` would win ove
 
 == Changelog ==
 
-= 0.1.0 =
-* Release
-
-== Arbitrary section ==
-
-You may provide arbitrary sections, in the same format as the ones above. This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation." Arbitrary sections will be shown below the built-in sections outlined above.
+= 0.2.0 =
+* First release that doesn't break in some way, shape or form.
