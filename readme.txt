@@ -15,8 +15,7 @@ This block is a simple FAQ block. Questions can be added, removed, and reordered
 == Installation ==
 
 1. Upload the plugin files to the `/wp-content/plugins/gutenberg-faq-schema` directory, or install the plugin through the WordPress plugins screen directly.
-1. Activate the plugin through the 'Plugins' screen in WordPress
-
+2. Activate the plugin through the 'Plugins' screen in WordPress
 
 == Frequently Asked Questions ==
 
