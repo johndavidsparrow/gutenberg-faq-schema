@@ -4,6 +4,29 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-create-block-gutenberg-faq-schema {
-	border: 1px dotted #f00;
+ .wp-block-create-block-gutenberg-faq-schema {
+	--block-gutenberg-faq-schema-red: rgb(146, 0, 0);
+	padding: 2px;
+	.faq-editor-container {
+		border: 1px solid rgb(143 142 142);
+		margin-bottom: 1rem;
+		background: #e5e5e5;
+		padding: 1rem;
+		border-radius: 5px;
+	}
+	.textarea-faq {
+		textarea {
+			border-radius: 5px 5px 0 5px;
+		}
+	}
+	.btn-remove {
+		border: 1px solid var(--block-gutenberg-faq-schema-red);
+		color: var(--block-gutenberg-faq-schema-red);
+		background-color: #fff;
+		&:hover,
+		&:focus {
+			background-color: var(--block-gutenberg-faq-schema-red);
+			color: #fff;
+		}
+	}
 }

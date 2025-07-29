@@ -66,11 +66,8 @@ export default function Edit( { attributes, setAttributes } ) {
 		<div { ...useBlockProps() }>
 			<h3>FAQ Block</h3>
 			{faqs.map((faq, idx) => (
-				<div key={idx} style={{
-					border: '1px solid #eee',
-					pagging: '1rem',
-					marginBottom: '1rem'
-				}}>
+				<div key={idx}
+				className="faq-editor-container">
 					<TextareaControl
 						label="Question"
 						value={faq.question}
