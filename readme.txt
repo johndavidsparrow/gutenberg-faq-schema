@@ -1,5 +1,6 @@
 === Gutenberg Faq Schema ===
-Contributors:      The WordPress Contributors
+Contributors:      John Sparrow
+Plugin URI:        https://gutenberg-sandbox.showybelt.com/gutenberg-faq-schema-block-demo/
 Tags:              block
 Tested up to:      6.7
 Stable tag:        0.2.0
@@ -11,6 +12,8 @@ Gutenberg block for FAQs, reorderabble and with automated FAQ schema markup gene
 == Description ==
 
 This block is a simple FAQ block. Questions can be added, removed, and reordered in the editor, and in the front-end, FAQ schema markup is generated for improved SEO and better user experience.
+
+Check out a current demo of the block at: https://gutenberg-sandbox.showybelt.com/gutenberg-faq-schema-block-demo/
 
 == Installation ==
 
